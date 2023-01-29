@@ -1,23 +1,23 @@
-import { createUseStyles } from 'react-jss';
-import color from 'color';
-import { base } from '../../../css/base';
-import colors from '../../../css/colors';
-import zIndex from '../../../css/zIndex';
-import { strokeWidth, headerHeight } from '../../../css/sizes';
-import queries from '../../../css/queries';
-import transitions from '../../../css/transitions';
+import { createUseStyles } from "react-jss";
+import color from "color";
+import { base } from "../../../css/base";
+import colors from "../../../css/colors";
+import zIndex from "../../../css/zIndex";
+import { strokeWidth, headerHeight } from "../../../css/sizes";
+import queries from "../../../css/queries";
+import transitions from "../../../css/transitions";
 
 export default createUseStyles({
   header: {
     padding: base(2),
-    display: 'flex',
-    justifyContent: 'space-between',
+    display: "flex",
+    justifyContent: "space-between",
     zIndex: zIndex.header,
-    position: 'fixed',
+    position: "fixed",
     top: 0,
     left: 0,
     right: 0,
-    pointerEvents: 'none',
+    pointerEvents: "none",
     [queries.m]: {
       padding: base(1.5),
     },
@@ -25,48 +25,50 @@ export default createUseStyles({
   logo: {
     background: colors.red,
     padding: base(0.875),
-    pointerEvents: 'all',
+    pointerEvents: "all",
   },
   icon: {
-    display: 'block',
+    display: "block",
     width: base(1.25),
     height: base(1.25),
   },
   menuButton: ({ menuActive }) => ({
-    pointerEvents: 'all',
+    pointerEvents: "all",
     background: colors.gray,
-    transition: 'all 200ms linear',
+    transition: "all 200ms linear",
     width: base(3),
     height: base(3),
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: '100%',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: "100%",
     border: 0,
-    boxShadow: `inset 0 0 0 ${strokeWidth} ${menuActive ? colors.antique : colors.gray}`,
-    cursor: 'pointer',
-    '&:focus': {
-      outline: 'none',
+    boxShadow: `inset 0 0 0 ${strokeWidth} ${
+      menuActive ? colors.antique : colors.gray
+    }`,
+    cursor: "pointer",
+    "&:focus": {
+      outline: "none",
       background: color(colors.gray).lighten(0.8).hex(),
     },
-    '&:active': {
-      outline: 'none',
+    "&:active": {
+      outline: "none",
       background: color(colors.gray).lighten(1.2).hex(),
     },
   }),
   menu: {
     background: colors.gray,
-    position: 'relative',
+    position: "relative",
     padding: `${headerHeight} 0 0`,
     border: 0,
     top: 0,
     left: 0,
-    width: '100%',
-    height: '100%',
-    overflowX: 'hidden',
-    overflowY: 'auto',
+    width: "100%",
+    height: "100%",
+    overflowX: "hidden",
+    overflowY: "auto",
     [queries.m]: {
-      overflowY: 'auto',
+      overflowY: "auto",
       padding: `${headerHeight} ${base(1.5)} 0`,
     },
   },
@@ -77,37 +79,37 @@ export default createUseStyles({
   },
   navLinks: {
     [queries.m]: {
-      position: 'relative',
+      position: "relative",
       zIndex: 1,
       marginBottom: base(12),
-      pointerEvents: 'none',
-      '& a': {
-        pointerEvents: 'all',
+      pointerEvents: "none",
+      "& a": {
+        pointerEvents: "all",
       },
     },
   },
   primaryNavItem: {
     color: colors.antique,
-    textDecoration: 'none',
-    '&:hover': {
+    textDecoration: "none",
+    "&:hover": {
       transition: `all ${transitions.default}ms linear`,
       color: colors.blue,
     },
   },
   secondaryNavItem: {
     transition: `all ${transitions.default}ms linear`,
-    color: 'white',
-    textDecoration: 'none',
-    '&:hover': {
+    color: "white",
+    textDecoration: "none",
+    "&:hover": {
       color: colors.blue,
     },
   },
   ctaWrap: {
-    position: 'fixed',
+    position: "fixed",
     right: base(-5),
     bottom: base(-8),
     [queries.m]: {
-      display: 'block',
+      display: "block",
       right: base(-3),
       bottom: base(-6),
     },

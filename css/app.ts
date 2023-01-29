@@ -1,49 +1,49 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { createUseStyles } from 'react-jss';
-import { htmlFontSize, baselinePX, base } from './base';
-import colors from './colors';
-import { h1, h2, h3, h4, h5, body, fontFamily } from './type';
-import queries from './queries';
-import transitions from './transitions';
+import { createUseStyles } from "react-jss";
+import { htmlFontSize, baselinePX, base } from "./base";
+import colors from "./colors";
+import { h1, h2, h3, h4, h5, body, fontFamily } from "./type";
+import queries from "./queries";
+import transitions from "./transitions";
 
 export default createUseStyles({
   // @ts-ignore
-  '@font-face': [
+  "@font-face": [
     {
-      fontFamily: 'Lausanne',
-      src: 'url(/fonts/Lausanne-300.woff)',
+      fontFamily: "Lausanne",
+      src: "url(/fonts/Lausanne-300.woff)",
       fallbacks: [
-        'url(/fonts/Lausanne-300.ttf) format(truetype)',
-        'url(/fonts/Lausanne-300.svg) format(svg)',
+        "url(/fonts/Lausanne-300.ttf) format(truetype)",
+        "url(/fonts/Lausanne-300.svg) format(svg)",
       ],
       fontWeight: 300,
-      fontStyle: 'normal',
+      fontStyle: "normal",
     },
     {
-      fontFamily: 'Lausanne',
-      src: 'url(/fonts/Lausanne-300italic.woff)',
+      fontFamily: "Lausanne",
+      src: "url(/fonts/Lausanne-300italic.woff)",
       fallbacks: [
-        'url(/fonts/Lausanne-300italic.ttf) format(truetype)',
-        'url(/fonts/Lausanne-300italic.svg) format(svg)',
+        "url(/fonts/Lausanne-300italic.ttf) format(truetype)",
+        "url(/fonts/Lausanne-300italic.svg) format(svg)",
       ],
       fontWeight: 300,
-      fontStyle: 'italic',
+      fontStyle: "italic",
     },
   ],
-  '@global': {
-    'html, body': {
+  "@global": {
+    "html, body": {
       margin: 0,
-      '-webkit-font-smoothing': 'antialiased',
+      "-webkit-font-smoothing": "antialiased",
       color: colors.gray,
-      height: '100%',
+      height: "100%",
     },
-    '*': {
-      boxSizing: 'border-box',
+    "*": {
+      boxSizing: "border-box",
     },
-    '::selection': {
+    "::selection": {
       background: colors.red,
       color: colors.white,
-      mixBlendMode: 'normal',
+      mixBlendMode: "normal",
     },
     html: {
       fontFamily,
@@ -54,8 +54,8 @@ export default createUseStyles({
         fontSize: htmlFontSize * 0.75,
       },
     },
-    '#__next': {
-      height: '100%',
+    "#__next": {
+      height: "100%",
     },
     h1,
     h2,
@@ -76,64 +76,64 @@ export default createUseStyles({
     li: {
       ...body,
     },
-    '.page-transitions': {
+    ".page-transitions": {
       transition: `opacity ${transitions.page}ms linear`,
     },
-    '.page-transitions-enter': {
+    ".page-transitions-enter": {
       opacity: 0,
     },
-    '.page-transitions-enter-active': {
+    ".page-transitions-enter-active": {
       opacity: 1,
     },
-    '.page-transitions-enter-done': {
+    ".page-transitions-enter-done": {
       opacity: 1,
     },
-    '.page-transitions-exit': {
+    ".page-transitions-exit": {
       opacity: 1,
     },
-    '.page-transitions-exit-active': {
+    ".page-transitions-exit-active": {
       opacity: 0,
     },
-    '.page-transitions-exit-done': {
+    ".page-transitions-exit-done": {
       opacity: 0,
     },
-    '.payload__modal-item': {
+    ".payload__modal-item": {
       opacity: 0,
       transition: `opacity ${transitions.modal}ms linear`,
     },
-    '.payload__modal-item--enterActive': {
+    ".payload__modal-item--enterActive": {
       opacity: 1,
     },
-    '.payload__modal-item--enterDone': {
+    ".payload__modal-item--enterDone": {
       opacity: 1,
     },
-    '.Toastify .Toastify__toast-container': {
+    ".Toastify .Toastify__toast-container": {
       left: base(2),
       right: base(2),
-      transform: 'none',
-      width: 'auto',
+      transform: "none",
+      width: "auto",
     },
-    '.Toastify .Toastify__toast': {
+    ".Toastify .Toastify__toast": {
       padding: base(0.5),
       borderRadius: 0,
-      fontWeight: 'normal',
+      fontWeight: "normal",
     },
-    '.Toastify .Toastify__close-button': {
-      alignSelf: 'center',
+    ".Toastify .Toastify__close-button": {
+      alignSelf: "center",
     },
-    '.Toastify .Toastify__toast--success': {
+    ".Toastify .Toastify__toast--success": {
       color: colors.gray,
       background: colors.blue,
     },
-    '.Toastify .Toastify__close-button--success': {
-      alignSelf: 'center',
+    ".Toastify .Toastify__close-button--success": {
+      alignSelf: "center",
     },
-    '.Toastify .Toastify__toast--error': {
+    ".Toastify .Toastify__toast--error": {
       color: colors.antique,
       background: colors.red,
     },
   },
   app: {
-    height: '100%',
+    height: "100%",
   },
 });
