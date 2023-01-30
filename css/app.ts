@@ -13,22 +13,22 @@ export default createUseStyles({
       fontFamily: "Lausanne",
       src: "url(/fonts/Lausanne-300.woff)",
       fallbacks: [
-        "url(/fonts/Lausanne-300.ttf) format(truetype)",
-        "url(/fonts/Lausanne-300.svg) format(svg)",
+        "url(/fonts/Lausanne-300.woff) format(truetype)",
+        // "url(/fonts/Lausanne-300.svg) format(svg)",
       ],
       fontWeight: 300,
       fontStyle: "normal",
     },
-    {
-      fontFamily: "Lausanne",
-      src: "url(/fonts/Lausanne-300italic.woff)",
-      fallbacks: [
-        "url(/fonts/Lausanne-300italic.ttf) format(truetype)",
-        "url(/fonts/Lausanne-300italic.svg) format(svg)",
-      ],
-      fontWeight: 300,
-      fontStyle: "italic",
-    },
+    // {
+    //   fontFamily: "Lausanne",
+    //   src: "url(/fonts/Lausanne-300italic.woff)",
+    //   fallbacks: [
+    //     "url(/fonts/Lausanne-300italic.ttf) format(truetype)",
+    //     "url(/fonts/Lausanne-300italic.svg) format(svg)",
+    //   ],
+    //   fontWeight: 300,
+    //   fontStyle: "italic",
+    // },
   ],
   "@global": {
     "html, body": {

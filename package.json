@@ -13,11 +13,10 @@
     "build:next": "next build",
     "build:server": "tsc --project tsconfig.server.json",
     "build:payload": "payload build",
-    "build": "npm run build:payload && npm run build:server",
+    "build": "NODE_ENV=production yarn build:payload && yarn build:server && NEXT_BUILD=true node dist/index.js",
     "dev": "node dev.js",
     "seed": "node seed/index.js",
-    "serve": "NODE_ENV=production node dist/index.js",
-    "start": "node dist/index.js"
+    "serve": "NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
     "@babel/register": "^7.12.10",
